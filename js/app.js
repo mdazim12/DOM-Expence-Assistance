@@ -17,6 +17,8 @@
       const resultArea = document.getElementById('results');
        resultArea.classList.remove('hidden');
 
+       
+
  })
 
  document.getElementById('calculate-savings').addEventListener('click',function(){
@@ -50,6 +52,8 @@
       hsitoryTabItems.classList.remove('py-2', 'rounded-l-md',  'duration-200', 'text-white',  'bg-gradient-to-r', 'from-blue-500', 'to-purple-600');
 
       assistantTab.classList.add('py-2', 'rounded-l-md',  'duration-200', 'text-white',  'bg-gradient-to-r', 'from-blue-500', 'to-purple-600');
+
+      document.getElementById('expense-form').classList.remove('hidden');
    })
 
  //History section
@@ -61,6 +65,12 @@
       
       const asstiance = document.getElementById('assistant-tab');
       asstiance.classList.remove('py-2', 'rounded-l-md',  'duration-200', 'text-white',  'bg-gradient-to-r', 'from-blue-500', 'to-purple-600')
+
+      document.getElementById('expense-form').classList.add('hidden');
+
+      const div = document.createElement('div');
+      div.innerText = `<p clas s= "text-base bg-red ">Transtion</p>`
+      this.insertBefore('history-section',div)
    })
 
 
